@@ -1,4 +1,4 @@
-image: Visual Studio 2017
+image: Visual Studio 2019
 platform: x64
 configuration: Release
 
@@ -55,7 +55,7 @@ install:
     - cmd: set PATH=%PATH%;C:\projects\saturn\usr\bin;C:\projects\saturn\nasm-2.14.02;C:\projects\saturn\jom\bin;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0
 
     # MSVC environment
-    - cmd: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"'
+    - cmd: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"'
 
 build_script:
     - cmd: make BOOST_LINK=shared PYTHON_BIN=C:/projects/saturn/python/python.exe boost_EXTERNAL=C:/projects/saturn/boost llvm_EXTERNAL=C:/projects/saturn/llvm -j4 
